@@ -1,0 +1,27 @@
+# StrengthSMP Configuration
+
+strength:
+  min: -5
+  max: 5
+  default: 0
+  # Damage multiplier per strength point (0.10 = +10% damage per point)
+  damage-per-point: 0.10
+
+# Strength Knowledge Book settings
+book:
+  # Display name (MiniMessage format)
+  name: "<gold><bold>Strength Knowledge Book"
+  lore:
+    - "<gray>A fragment of raw power."
+    - "<gray>Right-click to consume and gain"
+    - "<green>+1 Strength"
+
+messages:
+  prefix: "<dark_gray>[<gold>Strength<dark_gray>] "
+  on-kill-gain: "<green>+1 Strength from killing <white>%victim%<green>! (Now: %strength%)"
+  on-death-loss: "<red>-1 Strength from dying to <white>%killer%<red>. (Now: %strength%)"
+  on-kill-capped: "<yellow>You are already at max Strength (+%max%). <white>%victim%<yellow> dropped a Strength Knowledge Book instead."
+  on-book-consume: "<green>You consumed a Strength Knowledge Book! (+1 Strength, now: %strength%)"
+  on-book-consume-capped: "<red>You are already at max Strength (+%max%). The book had no effect."
+  check-self: "<gray>Your Strength: <white>%strength%"
+  check-other: "<gray>%player%'s Strength: <white>%strength%"

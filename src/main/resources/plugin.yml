@@ -1,0 +1,26 @@
+name: StrengthSMP
+version: '${project.version}'
+main: com.tryfx.strengthsmp.StrengthSMP
+api-version: '1.21'
+description: Strength progression PvP plugin - kill players to gain permanent attack damage
+author: TryFX
+
+load: POSTWORLD
+
+commands:
+  strength:
+    description: Check your or another player's Strength level
+    usage: /strength [player]
+    permission: strengthsmp.use
+  strengthadmin:
+    description: Admin controls for StrengthSMP
+    usage: /strengthadmin <set|reset|reload> [player] [value]
+    permission: strengthsmp.admin
+
+permissions:
+  strengthsmp.use:
+    description: Allows checking strength
+    default: true
+  strengthsmp.admin:
+    description: Allows admin commands
+    default: op
